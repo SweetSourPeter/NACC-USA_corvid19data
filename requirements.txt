@@ -7,4 +7,6 @@
 
 lxml==3.4.4
 cssselect==0.9.1
-requests==2.18.4
+requests==2.23.0
+lxml == 4.5.0
+
