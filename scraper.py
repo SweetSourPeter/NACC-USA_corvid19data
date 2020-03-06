@@ -100,10 +100,17 @@ for k,v in recover.items():
     s['value']=v
     result3.append(s)
 
-hkt = pytz.timezone('Asia/Hong_Kong')
-dt = datetime.now().replace(tzinfo=hkt).date()
-# data = {titles[i]: values[i] for i in range(0, 4)}
-data['date'] = dt
-scraperwiki.sqlite.save(unique_keys=['date'], data=result1)
-scraperwiki.sqlite.save(unique_keys=['date'], data=result2)
-scraperwiki.sqlite.save(unique_keys=['date'], data=result3)
+# hkt = pytz.timezone('Asia/Hong_Kong')
+# dt = datetime.now().replace(tzinfo=hkt).date()
+# # data = {titles[i]: values[i] for i in range(0, 4)}
+# data['date'] = dt
+# scraperwiki.sqlite.save(unique_keys=['date'], data=result1)
+# scraperwiki.sqlite.save(unique_keys=['date'], data=result2)
+# scraperwiki.sqlite.save(unique_keys=['date'], data=result3)
+
+with open('virus.json','w') as file_obj:
+    json.dump(result1,file_obj)
+with open('death.json','w') as file_obj:
+    json.dump(result2,file_obj)
+with open('recover.json','w') as file_obj:
+    json.dump(result3,file_obj)
