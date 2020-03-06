@@ -25,7 +25,7 @@
 import requests
 from lxml import etree
 import json,datetime,time
-import scraperwiki
+# import scraperwiki
 from datetime import datetime
 import pytz
 
